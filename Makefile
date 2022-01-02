@@ -1,4 +1,4 @@
-SRCS		= ft_itoa.c ft_printf.c ft_putchar_mod.c ft_putnbr_hex.c ft_putnbr_mod.c ft_putnbr_mod_i.c ft_putnbr_u.c ft_putpointer.c ft_putstr_mod.c
+SRCS		= ft_printf.c ft_putchar_mod.c ft_putnbr_hex.c ft_putnbr_mod.c ft_putnbr_mod_no_sing.c ft_putnbr_u.c ft_putpointer.c ft_putstr_mod.c
 
 OBJS		= ${SRCS:.c=.o}
 

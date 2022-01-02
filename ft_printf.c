@@ -9,16 +9,14 @@ int	ft_printf_aux(char type, va_list args)
 		return (ft_putstr_mod(va_arg(args, char *)));
 	else if (type == 'p')
 		return (ft_putpointer(va_arg(args, char *)));
-	else if (type == 'd')
+	else if (type == 'd' || type == 'i')
 		return (ft_putnbr_mod(va_arg(args, int)));
-	else if (type == 'i')
-		return (ft_putnbr_mod_i(va_arg(args, int)));
 	else if (type == 'u') // diferencia de u con respecto a d,i es que imprime numeros mas grandes
 		return(ft_putnbr_u(va_arg(args, unsigned int)));
 	else if (type == 'x')
 		return(ft_putnbr_x(va_arg(args, unsigned int)));
 	else if (type == 'X')
-		return(ft_putnbr_x(va_arg(args, unsigned int)));
+		return(ft_putnbr_X(va_arg(args, unsigned int)));
 	else if (type == '%')
 	{
 		write(1,"%%",1); //deberia poder poner "%" solo sin necesidad de poner otro
@@ -26,7 +24,7 @@ int	ft_printf_aux(char type, va_list args)
 	}
 	return(-1);
 }
-int ft_printf(char *format, ...)
+int ft_printf(const char *format, ...)
 {
 	int		count;
 	int		i;
@@ -74,4 +72,13 @@ int main()
 	i = printf("%p",str);
 	printf("\nse imprimen %d  caracteres",i);
 	
+}*//*
+int main()
+{
+	int i;
+	i = printf("%p",-10);
+	printf("\nse imprimen %d  caracteres",i);
+	printf("\n----------------\n");
+	i = ft_printf("%p",-10);
+	printf("\nse imprimen %d  caracteres",i);
 }*/

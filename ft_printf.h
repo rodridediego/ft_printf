@@ -5,13 +5,11 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <stdarg.h>
-
-size_t				ft_intlen(long nb);
-char				*ft_itoa(int n);
+int					IntLength(int num);
 int					ft_printf_aux(char type, va_list args);
-int					ft_printf(char *format, ...);
+int					ft_printf(const char *format, ...);
 int					ft_putchar_mod(int c);
-int					ft_putnbr_mod_i(int num);
+int					ft_putnbr_mod_no_sing(int num);
 int					ft_putnbr_mod(int num);
 int					ft_putpointer(char *str);
 unsigned int		ft_putstr_mod(char *str);

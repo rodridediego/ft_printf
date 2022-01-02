@@ -38,13 +38,13 @@ long unsigned int ft_putnbr_x_lu(long  unsigned int num) //devuelve numero de ci
 
 int ft_putpointer(char *str)
 {
-	long unsigned int dir;
+	long unsigned int *dir;
 	if (!str)
 	{
 		write(1, "(nil)", 5);
 		return (5);
 	}
-	dir =(long unsigned int) &str;
+	dir =(long unsigned int*) &str;
 	write(1, "0x",2);
-	return (ft_putnbr_x_lu(dir)+2);
+	return (ft_putnbr_x_lu(*dir)+2);
 }
